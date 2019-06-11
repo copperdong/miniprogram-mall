@@ -1,5 +1,6 @@
 # miniprogram-mall
 微信小程序项目：铭恒灯饰电商+知晓云
+[文档和数据库](https://www.fageka.com/store/item/s/id/urmo8pl1025.html "铭恒灯饰")  
 # 指南
   本项目是来自实际项目“铭恒灯饰”<br>
   
@@ -13,7 +14,7 @@
     多行文本和单行文本异曲同工，
     只要在每行行首加两个Tab    
 <div align='center'>
-    <p>幼麟棋牌5.0 案例截图</p>
+    <p>小程序截图</p>
     <img src=https://github.com/copperdong/miniprogram-mall/blob/master/doc/home.jpg width = "180">
     <img src=https://github.com/copperdong/miniprogram-mall/blob/master/doc/catelog.jpg width = "180">
     <img src=https://github.com/copperdong/miniprogram-mall/blob/master/doc/cart.jpg width = "180">
