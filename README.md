@@ -5,7 +5,7 @@
   
     多行文本和单行文本异曲同工，
     只要在每行行首加两个Tab
-<img src="https://github.com/copperdong/miniprogram-mall/blob/master/doc/gh_24da18e564c9_1280.jpg" width = "100" height = "100" div align=right />
+<img src="https://github.com/copperdong/miniprogram-mall/blob/master/doc/gh_24da18e564c9_1280.jpg" width = "200" height = "200" div align=center /><br>
 
 [我的博客](http://blog.csdn.net/guodongxiaren "悬停显示")  
 
