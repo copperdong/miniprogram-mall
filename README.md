@@ -5,7 +5,7 @@
   
     多行文本和单行文本异曲同工，
     只要在每行行首加两个Tab
-![code](https://github.com/copperdong/miniprogram-mall/blob/master/doc/gh_24da18e564c9_1280.jpg=100x100 "小程序二维码") 
+<img src="https://github.com/copperdong/miniprogram-mall/blob/master/doc/gh_24da18e564c9_1280.jpg" width = "100" height = "100" div align=right />
 
 [我的博客](http://blog.csdn.net/guodongxiaren "悬停显示")  
 
