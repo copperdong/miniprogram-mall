@@ -12,11 +12,11 @@
 # 贡献者
 请阅读CONTRIBUTING.md 查阅为该项目做出贡献的开发者。
 # 作者
-copperdong
-Lily（设计）
-clement（测试）
-铭恒灯饰（商家）
+copperdong<br>
+Lily（设计）<br>
+clement（测试）<br>
+铭恒灯饰（商家）<br>
 # 版权说明
 本项目完全开源
 # 鸣谢
-感谢知晓云的支持和铭恒灯饰商家赞助
+感谢知晓云平台和铭恒灯饰商家赞助
