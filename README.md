@@ -12,9 +12,7 @@
     只要在每行行首加两个Tab    
     
 <img src="https://github.com/copperdong/miniprogram-mall/blob/master/doc/home.jpg" width = "180" div align=left />
-<img src="https://github.com/copperdong/miniprogram-mall/blob/master/doc/catelog.jpg" width = "180" div align=left />
-<img src="https://github.com/copperdong/miniprogram-mall/blob/master/doc/cart.jpg" width = "180" div align=left />
-<img src="https://github.com/copperdong/miniprogram-mall/blob/master/doc/user.jpg" width = "180" div align=left />
+
 ------
 # 文档简介
     多行文本和单行文本异曲同工，
