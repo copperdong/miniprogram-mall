@@ -6,7 +6,11 @@
     多行文本和单行文本异曲同工，
     只要在每行行首加两个Tab
 <img src="https://github.com/copperdong/miniprogram-mall/blob/master/doc/gh_24da18e564c9_1280.jpg" width = "200" height = "200" div align=center /><br>
-<img src="https://github.com/copperdong/miniprogram-mall/blob/master/doc/home.jpg" width = "200" height = 800" div align=center /><img src="https://github.com/copperdong/miniprogram-mall/blob/master/doc/catelog.jpg" width = "200" height = "800" div align=center />src="https://github.com/copperdong/miniprogram-mall/blob/master/doc/cart.jpg" width = "200" height = "800" div align=center />src="https://github.com/copperdong/miniprogram-mall/blob/master/doc/user.jpg" width = "200" height = "800" div align=center /><br>
+<img src="https://github.com/copperdong/miniprogram-mall/blob/master/doc/home.jpg" width = "150" div align=left />
+<img src="https://github.com/copperdong/miniprogram-mall/blob/master/doc/catelog.jpg" width = "150" div align=left />
+<img src="https://github.com/copperdong/miniprogram-mall/blob/master/doc/cart.jpg" width = "150" div align=left />
+<img src="https://github.com/copperdong/miniprogram-mall/blob/master/doc/user.jpg" width = "150" div align=left /><br>
+
 
 [我的博客](http://blog.csdn.net/guodongxiaren "悬停显示")  
 
