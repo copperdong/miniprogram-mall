@@ -1,7 +1,13 @@
 # miniprogram-mall
 微信小程序项目：铭恒灯饰电商+知晓云
 # 指南
-  本项目是来自实际项目“铭恒灯饰”
+  本项目是来自实际项目“铭恒灯饰”<br>
+  
+    多行文本和单行文本异曲同工，
+    只要在每行行首加两个Tab
+
+[我的博客](http://blog.csdn.net/guodongxiaren "悬停显示")  
+
 ![baidu](http://www.baidu.com/img/bdlogo.gif "百度logo") 
 # 贡献者
 请阅读CONTRIBUTING.md 查阅为该项目做出贡献的开发者。
