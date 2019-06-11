@@ -1,0 +1,96 @@
+<view class="container">
+  <swiper class="goodsimgs" indicator-dots="true" autoplay="true" interval="3000" duration="1000">
+    <swiper-item wx:for="{{gallery}}" wx:key="{{item}}">
+      <image src="{{item}}" background-size="cover" mode="aspectFit"></image>
+    </swiper-item>
+  </swiper>
+  <view class="goods-info">
+    <text class="price">￥{{specPrice}}</text>
+    <text class="name">{{goods.name}}</text>
+  </view>
+  <view class="section-nav" bindtap="switchAttrPop">
+    <view class="txt">请选择规格数量</view>
+    <image class="img" src="../../static/images/address_right.png" background-size="cover"></image>
+  </view>
+  <view class="detail">
+    <import src="../../lib/wxParse/wxParse.wxml" />
+    <template is="wxParse" data="{{wxParseData:goodsDetail.nodes}}" />
+  </view>
+  <view class="comments" wx:if="{{commentList.length > 0}}">
+    <text class="head">评价</text>
+    <view class="comment" wx:for="{{commentList}}" wx:key="*this">
+      <view class="a">
+        <image class="avatar" src="{{item.user_avatar}}"></image>
+        <view class="b"> 
+          <text class="name">{{item.user_name}}</text>
+          <view class="score">
+            <image wx:for="{{userStars}}" wx:for-item="sitem" wx:for-index="index" wx:key="index" wx:if="{{index<item.score}}" src="{{sitem}}">
+            </image>
+          </view>
+        </view>
+      </view>
+      <text class="c">{{item.comment}}</text>
+    </view>
+  </view>
+</view>
+
+<!-- 底部固定选择栏 -->
+<view class="bottom-btn">
+  <view class="home" bindtap="openHome">
+    <image class="icon" src="/static/images/icon_home.png"></image>
+  </view>
+  <button class='contact' open-type="contact" session-from="weapp">
+    <image class="icon" src="/static/images/detail_kefu.png"></image>
+  </button>
+  <view class="cart">
+    <view class="box">
+      <text class="cart-count">{{cartGoodsCount}}</text>
+      <image bindtap="openCartPage" class="icon" src="/static/images/icon_cart.png"></image>
+    </view>
+  </view>
+  <view class="ready-buy" bindtap="goShopping">立即购买</view>
+  <view class="add-cart" bindtap="addToCart">加入购物车</view>
+</view>
+
+<!-- 规格选择弹出框 -->
+<view class="attr-pop-box" hidden="{{!openAttr}}">
+  <view class="attr-pop">
+    <view class="close" bindtap="closeAttr">
+      <image class="icon" src="/static/images/icon_close.png"></image>
+    </view>
+    <view class="img-info">
+      <image class="img" src="{{specUrl}}" bindtap='previewProductImage'></image>
+      <view class="info">
+        <view class="price">价格：￥{{specPrice}}</view>
+        <view class="spec-txt">已选择：{{checkedSpecText}}</view>
+      </view>
+    </view>
+    <view class="spec-con">
+      <block wx:for="{{specList}}" wx:for-index="specIndex" wx:key="*this">
+        <view class="name">{{item.name}}</view>
+        <view class="values">
+          <view 
+            wx:for="{{item.valueList}}" 
+            wx:for-item="vitem" 
+            wx:for-index="valueIndex" 
+            class="value {{item.checkedIndex == valueIndex? 'selected' : ''}}"
+            bindtap="clickSkuValue" 
+            wx:key="*this" 
+            data-name-id="{{specIndex}}"  
+            data-value-id="{{valueIndex}}">
+            {{vitem}}
+          </view>
+        </view>
+      </block>
+
+      <view class="number-item">
+        <view class="name">数量</view>
+        <view class="selnum">
+          <view class="cut" bindtap="cutNumber">-</view>
+          <text class="number">{{number}}</text>
+          <view class="add" bindtap="addNumber">+</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

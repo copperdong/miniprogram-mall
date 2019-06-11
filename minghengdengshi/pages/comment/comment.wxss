@@ -1,0 +1,85 @@
+page {
+  width: 100%;
+  height: 100%;
+  background: #fff;
+}
+.container {
+  display: flex;
+  flex-direction: column;   /* 垂直布局 */
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  background: #fff;
+}
+.score {
+  display: flex;
+  flex-direction: row;   /* 水平布局 */
+  justify-content: center;
+  align-items: center;
+
+  width: 720rpx;
+  height: 100rpx;
+  border-bottom: 1px solid #ccc;
+}
+
+.score .left {
+  width: 100rpx;
+  text-align: center;
+  line-height: 100rpx;
+  font-size: 30rpx;
+}
+.score .right {
+  display: flex;
+  flex-direction: row;          /* 水平布局 */
+  justify-content: flex-start;  /* 靠左 */
+  align-items: center;
+
+  width: 620rpx;
+}
+
+.star {
+  width: 54rpx;
+  height: 40rpx;
+}
+
+.star image{
+  width: 40rpx;
+  height: 40rpx;
+}
+
+.score .right .rtxt {
+  height: 100rpx;
+  margin-left: 20rpx;
+  text-align: center;
+  line-height: 100rpx;
+  font-size: 30rpx;
+  color: #c00;
+  font-weight: bold;
+}
+
+.conts{
+  width: 720rpx;
+  height: auto;
+  background: #fff;
+}
+
+.areas{
+  width: 720rpx;
+  height:300rpx;
+  font-size: 30rpx;
+  padding-top: 30rpx;
+}
+/* 底部提交按钮 */
+.btn {
+  width: 600rpx;
+  height: 80rpx;
+  text-align: center;
+  line-height: 80rpx;
+  font-size: 30rpx;
+  color: #fff;
+  background: #6dbb6d;
+  position: fixed;
+  left:76rpx;
+  bottom: 34rpx;
+} 

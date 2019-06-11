@@ -1,0 +1,9 @@
+view,image,text,navigator{
+  padding:0;
+  margin:0;
+}
+
+view,text{
+  font-size: 30rpx;
+  color: #333;
+}

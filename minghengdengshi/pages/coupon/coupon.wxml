@@ -1,0 +1,25 @@
+<view class="container">
+  <view class="coupon">
+    <view class="stamp" wx:for="{{couponList}}" wx:for-index="index" wx:for-item="item" wx:key="*this" data-index="{{index}}">
+      <view class="par">
+        <view class="sign">
+          <text class="b">￥</text>
+          <text class="c">{{item.discount}}</text>
+        </view>
+        <text class="e">订单满{{item.amount}}元</text>
+        <text class="e">{{item.start_time_txt}}至{{item.end_time_txt}}</text>
+      </view>
+      <view class="copy" >
+        <block wx:if="{{item.status==0}}">
+          <text class="f">未使用</text>
+        </block>
+        <block wx:elif="{{item.status==2}}">
+          <text class="g">已失效</text>
+        </block>
+        <block wx:else>
+          <text class="g">已使用</text>
+        </block>
+      </view>
+    </view>
+  </view>
+</view>

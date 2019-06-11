@@ -1,0 +1,60 @@
+<view class="container">
+  <view class="search-container">
+    <view class="search">
+      <icon type="search" class="search-img" size="18" color="#7F8E99"></icon>
+      <input type="text" placeholder="卧室台灯" 
+        placeholder-class="placeholder" bindfocus="onBindFocus"
+        bindinput="inputMsg" 
+        bindconfirm="toggleSearch" value="{{inputValue}}" />
+    </view>
+  </view>
+  <view class="banner">
+    <swiper class="banner-swiper" indicator-dots="true" autoplay="true" interval="3000" duration="200">
+      <swiper-item class="banner-item" wx:for="{{banner}}" wx:key="{{item.id}}">
+        <navigator url="../goods/goods?id={{item.goods_id}}">
+          <image src="{{item.url}}" background-size="cover"></image>
+        </navigator>
+      </swiper-item>
+    </swiper>
+  </view>
+  <view class="coup" wx:if="{{couponList.length > 0}}">
+    <text class="head">专享优惠券</text>
+    <view class="coupon">
+      <view class="stamp" wx:for="{{couponList}}" wx:for-index="index" wx:for-item="item" wx:key="*this">
+        <view class="par">
+          <view class="sign">
+            <text class="b">￥</text>
+            <text class="c">{{item.discount}}</text>
+          </view>
+          <text class="e">订单满{{item.amount}}元</text>
+        </view>
+        <view class="copy">
+          <block wx:if="{{item.received==0}}">
+            <text class="f" bindtap="toggleCoupon" data-index="{{index}}">领取</text>
+          </block>
+          <block wx:else>
+            <text class="g">已领</text>
+          </block>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="goods-popular" wx:if="{{goods.length > 0}}">
+    <text class="head">精品推荐</text>
+    <view class="body">
+      <block wx:for="{{goods}}" wx:for-index="index" wx:for-item="gitem" wx:key="*this">
+        <navigator class="item" url="/pages/goods/goods?id={{gitem.id}}">
+          <image class="cover" src="{{gitem.cover}}"></image>
+          <text class="txt">{{gitem.name}}</text>
+          <text class="price">￥{{gitem.price}} <text wx:if="{{gitem.real_price}}">￥{{gitem.real_price}}</text></text>
+        </navigator>
+      </block>
+    </view>
+  </view>
+</view>
+
+<!-- 弹出广告对话框 -->
+<view class='adv' wx:if="{{showAdvDialog}}" bindtap='onCloseAdvDialog'>
+  <!--catchtap用于拦截事件-->
+  <image src="{{showAdvImageUrl}}"></image>
+</view>

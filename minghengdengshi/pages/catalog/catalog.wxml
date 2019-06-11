@@ -1,0 +1,18 @@
+<view class="container">
+  <view class="catalog">
+    <scroll-view class="nav" scroll-y="true">
+      <view class="item {{ currentCategory.id == item.id ? 'active' : ''}}" wx:for="{{categoryList}}"  data-id="{{item.id}}" data-index="{{index}}" bindtap="switchCategory" wx:key="*this">{{item.name}}</view>
+    </scroll-view>
+    <scroll-view class="cate" scroll-y="true">
+      <block wx:for="{{currentCategory.goodsList}}" wx:for-index="index" wx:for-item="gitem" wx:key="*this">
+        <navigator class="item" url="/pages/goods/goods?id={{gitem.id}}">
+          <image class="img" src="{{gitem.cover.path}}" background-size="cover"></image>
+          <view class="right">
+            <text class="name">{{gitem.name}}</text>
+            <text class="price">￥{{gitem.price}}</text>
+          </view>
+        </navigator>
+      </block>
+    </scroll-view>
+  </view>
+</view>

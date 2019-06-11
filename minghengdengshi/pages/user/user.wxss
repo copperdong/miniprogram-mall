@@ -1,0 +1,194 @@
+page{
+  width: 750rpx;
+  background: #fff;
+}
+.container{
+  display: flex;
+  flex-direction: column;  /* 垂直布局 */
+  justify-content: flex-start;  /* 靠顶部排布 */
+  align-items: center;
+
+  background: #f4f4f4;
+  width: 100%;
+}
+
+.profile-info {
+  display: flex;
+  flex-direction: row;  /* 水平布局 */
+  justify-content: flex-start;  /* 靠左排布 */
+  align-items: center;
+  
+  width: 100%;
+  height: 280rpx;
+  background: #6dbb6d;
+}
+
+.profile-info .avatar {
+  height: 148rpx;
+  width: 148rpx;
+  border-radius: 50%;   /*圆角*/
+  border: 4rpx solid #fff;
+  margin-left: 30rpx;   /* 左边留 */
+  margin-right: 30rpx;  /* 右边留 */
+}
+
+.profile-info .info {
+  display: flex;
+  flex-direction: column;    /* 垂直布局 */
+  justify-content: center;
+  flex-grow: 1;  /*宽度拉伸*/
+}
+
+.profile-info .name {
+  width: 300rpx;
+  color: #fff;
+  font-size: 38rpx;
+  overflow: hidden;         /* 保持一行，多余的字省略 */
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.profile-info .coupon {
+  margin-top: 20rpx;
+  width: 140rpx;
+  height: 40rpx;
+  background: #fff;
+  text-align: center;
+  line-height: 40rpx;
+  color: #6dbb6d;
+  font-size: 24rpx;
+  border: 1px solid #fff;
+  border-radius: 20rpx;
+}
+/* 我的订单 */
+.myorder {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 750rpx;
+  background: #fff;
+}
+.myorder .head {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 80rpx;
+  width: 100%;
+  border-bottom: 1px solid #f4f4f4;
+}
+.myorder .head text {
+  line-height: 50rpx;
+  font-size: 26rpx;
+  color: #333;
+  text-align: left;
+  padding-left: 20rpx;
+}
+.myorder .body {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  height: 150rpx;
+}
+.myorder .item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.myorder .item image{
+  width: 60rpx;
+  height: 60rpx;
+}
+.myorder .item text{
+  font-size: 26rpx;
+  color: #333;
+}
+
+/* 联系客服 */
+.contact-item{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height:100rpx;
+  width: 100%;
+  background: #fff;
+  border-bottom: 2px solid #f4f4f4;
+}
+
+.contact-item image {
+  height: 32rpx;
+  width: 32rpx;
+  margin: auto 20rpx auto 24rpx;
+}
+
+.cBtn {
+  height: 80rpx;
+  width: 540rpx;
+  color:#333;
+  font-size:16px;
+  text-align: left;
+  padding: 0rpx;
+  outline: none;
+  background: none;
+  border: none;  
+  margin-left: 0;
+}
+
+.cBtn::after {
+  border: none;  
+}
+
+.contact-item-btn{
+  width: 50rpx;
+  color: #A6B5C5;
+  height: 40rpx;
+  margin-right: 20rpx;
+  text-align: center;
+}
+/* 画向右的箭头 */
+.contact-item-btn::after{
+  display: inline-block;
+  content:'';
+  width: 18rpx;
+  height: 18rpx;
+  color: #A6B5C5 ;
+  margin-top: 8rpx;
+  border:2px #A6B5C5  solid;
+  border-top-color:transparent; /* 去掉正方形顶部和左部的外边框 */
+  border-left-color:transparent;
+  transform: rotate(-45deg);   /* 正方形逆时针旋转45度 */
+}
+/* 登录窗口 */
+.dialog-login{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5); 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dialog-login .dialog-body{
+  width: 540rpx;
+  height: auto;
+  overflow: hidden;
+  background: #fff;
+  border-radius: 5px;
+  padding: 40rpx;
+}
+
+.dialog-login .dialog-body button{
+  width: 100%;
+  margin-top: 30rpx;
+}
+

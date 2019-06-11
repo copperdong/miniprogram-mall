@@ -1,0 +1,33 @@
+<view class="container">
+  <view class="no-cart" wx:if="{{cartGoods.length <= 0}}">
+    <view class="empty">
+      <image src="/static/images/cart_empty.png" />
+      <text>空</text>
+    </view>
+  </view>
+  <view class="cart-list" wx:if="{{cartGoods.length > 0}}">
+    <text class="head">◇ 满99元包邮</text>
+    <view class="item" wx:for="{{cartGoods}}" wx:key="{{item.id}}">
+      <view class="checkbox {{item.checked ? 'checked' : ''}}" bindtap="checkedItem" data-item-index="{{index}}"></view>
+      <image class="img" src="{{item.cover}}"></image>
+      <view class="info">
+        <text class="name">{{item.name}}</text>
+        <view class="attr">{{item.specifition}}</view>
+        <view class="count">
+          <text class="price">￥{{item.price}}</text>
+          <view class="selnum">
+            <view class="cut" bindtap="cutNumber" data-item-index="{{index}}">-</view>
+            <text class="number">{{item.number}}</text>
+            <view class="add" bindtap="addNumber" data-item-index="{{index}}">+</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="cart-bottom">
+    <view class="checkbox {{checkedAllStatus ? 'checked' : ''}}" bindtap="checkedAll"></view>
+    <text class="total">全选</text>
+    <text class="price">{{'￥'+checkedGoodsAmount}}</text>
+    <view class="checkout" bindtap="checkoutOrder">下单</view>
+  </view>
+</view>

@@ -1,0 +1,320 @@
+page {
+  width: 100%;
+}
+.container {
+  display: flex;
+  flex-direction: column; /*垂直布局*/
+  justify-content: flex-start;  /*紧靠顶部*/
+  align-items: center;
+  width: 750rpx;
+  background: #6dbb6d;
+}
+/* 搜索框 */
+.search-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 90rpx;
+  background: #6dbb6d;
+  margin: 0;
+  position: fixed;   /* 固定页面顶端 */
+  top: 0;
+  left: 0;
+  z-index: 100;  /* 显示在其它页面上面 */
+}
+.search {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 34rpx;
+  height: 68rpx;
+  width: 720rpx;
+}
+
+.search-img {
+  margin: auto 0 auto 30rpx;
+}
+
+.search input {
+  height: 100%;
+  width: 580rpx;
+  margin-left: 10rpx;
+  font-size: 14px;
+}
+
+.placeholder {
+  font-size: 30rpx;
+  color: #7F8E99;
+  margin-left: 10rpx;
+}
+/*海报样式*/
+.banner {
+  display: flex;
+  flex-direction: row;   
+  justify-content: center;  /*居中*/
+  align-items: center;
+
+  width: 750rpx;
+  height: 280rpx;
+  margin-top: 90rpx;  /* 顶部距离 */
+  background: linear-gradient(#6dbb6d, 50%, #f0f0f0 50%); /*背景色，上部60%为绿色，下部40%为灰色*/
+  position: relative;
+}
+
+.banner .banner-swiper {
+  width: 720rpx;
+  height: 250rpx;
+  border-radius: 20rpx; /* 圆角 */
+  background: #f0f0f0;
+  z-index: 0;
+  position: relative;  /* 为了before形成阴影 */
+}
+
+.banner .banner-swiper:before{  /*底部阴影产生突显效果*/
+  position:absolute;
+  content:"";
+  bottom:20rpx;
+  left:80rpx;   /* 左边距离 */
+  height: 30rpx;
+  width:560rpx;  /* 阴影宽度 */
+  z-index:-1;
+  box-shadow: 0 20rpx 40rpx rgba(0, 0, 0, 0.4);  /* 阴影 */
+}
+
+.banner .banner-item {
+  width: 720rpx;
+  height: 250rpx;
+  border-radius: 20rpx;
+  background: #f0f0f0;
+  z-index:9;
+}
+
+.banner image {
+  width: 720rpx;
+  height: 250rpx;
+  border-radius: 20rpx;
+  z-index:10;
+}
+
+/*精品推荐商品样式*/
+.goods-popular {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;  /*居中*/
+  align-items: flex-start;
+
+  width: 100%;
+  background: #f0f0f0;
+}
+
+.goods-popular .head {
+  width: 100%;
+  text-align: center;
+  font-size: 36rpx;
+  color: #6dbb6d;
+  font-weight: bold;
+  margin-bottom: 20rpx;
+}
+
+.goods-popular .body {
+  display: flex;
+  flex-flow: row wrap; /* 水平布局 允许换行*/
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  width: 750rpx;
+}
+
+.goods-popular .body .item {
+  display: flex;
+  flex-direction: column; /* 垂直布局 */
+  justify-content: center;
+  align-items: center;
+
+  width: 350rpx; /*总宽度680rpx*/
+  border-radius: 30rpx;  /* 圆角 */
+  background: #fff;
+  padding: 0;
+  margin-top: 6rpx;
+  margin-bottom: 6rpx;
+}
+/* 保持左右两边布局对称 */
+/* 奇数子元素的布局，左内边距留20rpx*/
+.goods-popular .body .item:nth-of-type(odd) {
+  margin-left: 20rpx;
+}
+/* 偶数子元素的布局，左内边距留6rpx*/
+.goods-popular .body .item:nth-of-type(even) {
+  margin-left: 10rpx;
+}
+
+.goods-popular .body .item .cover {
+  height: 350rpx; /* 商品封面高宽 */
+  width: 350rpx;
+  border-radius: 30rpx 30rpx 0 0;
+}
+
+.goods-popular .body .item .txt {
+  width: 310rpx;   /* 左右各留20rpx */
+  height: 72rpx;
+
+  text-align: left;
+  line-height: 36rpx;   /* 保持两行显示*/
+  font-size: 24rpx;
+  color: #333;
+
+  overflow: hidden;       /*多余的字显示省略号*/
+  white-space:wrap;
+  text-overflow: ellipsis;
+}
+
+.goods-popular .body .item .price {
+  height: 50rpx;
+  width: 310rpx;   /* 左右各留20rpx */
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+
+  text-align: left;
+  line-height: 50rpx; /* 保持一行显示*/
+  font-size: 26rpx;
+  color: red;
+  font-weight: bold;
+
+  overflow: hidden;       /*多余的字显示省略号*/
+  white-space:wrap;
+  text-overflow: ellipsis;
+}
+
+.goods-popular .body .item .price text{
+  font-size: 26rpx;
+  color: #b4282d;
+  text-decoration:line-through;  /*价格中划线*/
+}
+/* 优惠卷 */
+.coup {
+  display: flex;
+  flex-direction: column; /* 垂直布局 */
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  padding-top: 20rpx;
+  padding-bottom: 20rpx;
+  background: #f0f0f0;
+}
+
+.coup .head {
+  width: 720rpx;
+  text-align: center;
+  font-size: 36rpx;
+  color: #6dbb6d;
+  font-weight: bold;
+  margin-bottom: 20rpx;
+}
+
+.coupon {
+  display: flex;
+  flex-flow: row nowrap;       /*不换行*/
+  justify-content: flex-start; /*靠左*/
+  align-items: center;
+  width: 750rpx;
+  overflow-x: scroll;  /*水平方向滑动*/
+  overflow-y: hidden;
+}
+
+.coupon::-webkit-scrollbar {
+  display: none;    /*不显示滚动条*/
+}
+
+.coupon .stamp {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  width: 300rpx;
+  height: 160rpx;
+  padding: 0;
+  margin: 8rpx;
+  background-color: #6dbb6d;
+  /* 形成左边的半圆 */
+  background-image: radial-gradient(#fff 0, #fff 16rpx, transparent 16rpx); /* 径向渐变 */
+  background-size: 32rpx 32rpx; /* 720/24=30 */
+  background-position: -16rpx 64rpx;
+  background-repeat: no-repeat;
+}
+
+.coupon .stamp .par {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+
+  padding-left: 30rpx;
+  border-right: 2px dashed rgba(255,255,255, .3);
+  width: 200rpx;
+  height: 100%;
+}
+
+.coupon .stamp .par .sign {
+  color: #fff;
+}
+.coupon .stamp .par .sign .b {
+  font-size: 30rpx;
+  color: #fff;
+}
+.coupon .stamp .par .sign .c {
+  font-size: 50rpx;
+  color: #fff;
+}
+.coupon .stamp .par .e {
+  font-size: 20rpx;
+  color: #fff;
+}
+
+.coupon .stamp .copy {
+  width: 100rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.coupon .stamp .copy .f {
+  width: 40rpx;
+  font-size: 30rpx;
+  line-height: 60rpx;
+  text-align: center;  /*居中*/
+  color: #fff;
+  border: 2px solid #fff;
+}
+.coupon .stamp .copy .g {
+  width: 40rpx;
+  font-size: 30rpx;
+  line-height: 60rpx;
+  text-align: center;  /*居中*/
+  color: #ccc;
+  border: 2px solid #ccc;
+}
+
+/* 广告 */
+.adv{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5); 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.adv image{
+  width: 400rpx;
+  border-radius: 20rpx;
+}
+

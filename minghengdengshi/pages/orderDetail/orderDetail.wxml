@@ -1,0 +1,64 @@
+<view class="container">
+  <!-- 订单信息 -->
+  <view class="order-info">
+    <view class="order-time">下单时间：{{orderInfo.create_time}}</view>
+    <view class="order-num">订单编号：{{orderInfo.order_sn}}</view>
+    <view class="order-btn">
+      <view class="home" bindtap='taggleHome'>去逛逛!!!</view>
+      <view class="btn cancel" bindtap="cancelOrder" wx:if="{{orderInfo.order_status_text1}}">{{orderInfo.order_status_text1}}</view>
+      <view class="btn pay" bindtap="payOrder" wx:if="{{orderInfo.order_status_text2}}">{{orderInfo.order_status_text2}}</view>
+    </view>
+  </view>
+  
+  <!-- 商品信息 -->
+  <view class="order-goods">
+    <view class="head">
+      <view class="label">商品信息</view>
+      <view class="status">{{orderInfo.pay_status_text}}</view>
+    </view>
+    <view class="goods">
+      <!-- 查看商品 -->
+      <navigator class="item" wx:for="{{orderGoods}}" wx:key="{{item.id}}" url="/pages/goods/goods?id={{item.id}}">
+        <view class="img">
+            <image src="{{item.cover}}"></image>
+        </view>
+        <view class="info">
+            <view class="content">
+                <text class="name">{{item.name}}</text>
+                <text class="number">x{{item.number}}</text>
+            </view>
+            <view class="attr">{{item.specifition}}</view>
+            <view class="price">￥{{item.price}}</view>
+        </view>
+      </navigator>
+    </view>
+  </view>
+  <!-- 支付信息 -->
+  <view class="order-bottom">
+      <view class="address">
+          <view class="head">
+              <text class="name">{{orderInfo.username}}</text>
+              <text class="mobile">{{orderInfo.mobile}}</text>
+          </view>
+          <view class="body">{{orderInfo.address}}</view>
+      </view>
+      <view class="total">
+          <view class="content">
+            <text class="label">商品合计：</text>
+            <text class="txt">￥{{orderInfo.total_price}}</text>
+          </view>
+          <view class="content">
+            <text class="label">优惠：</text>
+            <text class="txt">￥{{orderInfo.discount}}</text>
+          </view>
+          <view class="content">
+              <text class="label">运费：</text>
+              <text class="txt">￥{{orderInfo.freight_price}}</text>
+          </view>
+      </view>
+      <view class="pay-fee">
+          <text class="label">实付：</text>
+          <text class="txt">￥{{orderInfo.price}}</text>
+      </view>
+  </view>
+</view>

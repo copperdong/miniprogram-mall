@@ -1,0 +1,88 @@
+.container {
+  width: 750rpx;
+}
+
+.coupon {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  width: 750rpx;
+}
+
+.coupon::-webkit-scrollbar {
+  display: none;    /*不显示滚动条*/
+}
+
+.coupon .stamp {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  width: 720rpx;
+  height: 160rpx;
+  padding: 0;
+  margin: 8rpx;
+
+  background-color: #6dbb6d;
+  background-image: radial-gradient(#fff 0, #fff 16rpx, transparent 16rpx); /* 径向渐变 */
+  background-size: 32rpx 32rpx; /* 720/24=30 */
+  background-position: -16rpx 64rpx;
+  background-repeat: no-repeat;
+
+}
+
+.coupon .stamp .par {
+  width: 480rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding-left: 60rpx;
+  border-right: 2px dashed rgba(255,255,255, .3);
+}
+
+.coupon .stamp .par .sign {
+  color: #fff;
+}
+
+.coupon .stamp .par .sign .b {
+  font-size: 30rpx;
+  color: #fff;
+}
+
+.coupon .stamp .par .sign .c {
+  font-size: 50rpx;
+  color: #fff;
+}
+
+.coupon .stamp .par .e {
+  font-size: 20rpx;
+  color: #fff;
+}
+
+.coupon .stamp .copy {
+  width: 240rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.coupon .stamp .copy .f {
+  font-size: 30rpx;
+  line-height: 60rpx;
+  text-align: center;  /*居中*/
+  color: #fff;
+  border: 2px solid #fff;
+}
+
+.coupon .stamp .copy .g {
+  font-size: 30rpx;
+  line-height: 60rpx;
+  text-align: center;  /*居中*/
+  color: #ccc;
+  border: 2px solid #ccc;
+}

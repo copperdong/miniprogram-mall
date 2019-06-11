@@ -1,0 +1,77 @@
+page{
+  height: 100%;
+  background: #f4f4f4;
+}
+
+.add-address {
+  width: 750rpx;
+}
+.add-address .add-form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  background: #fff;
+  width: 750rpx;
+  height: auto;
+  overflow: hidden;
+}
+
+.add-address .form-item{
+  display: flex;
+  align-items: center;
+  width: 720rpx;
+  height: 100rpx;
+  border-bottom: 1px solid #d9d9d9;
+}
+
+.add-address .input{
+  width: 620rpx;
+  height: 44rpx;
+  line-height: 44rpx;
+  overflow: hidden;
+}
+
+.add-address .position{
+  width: 50rpx;
+  height: 50rpx;
+}
+
+.add-address .btns{
+  display: flex;
+  flex-direction: row;
+
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  height: 100rpx;
+  width: 100%;
+}
+
+.add-address .cannel{
+  width: 50%;
+  height: 100rpx;
+  text-align: center;
+  line-height: 100rpx;
+  font-size: 28rpx;
+  color: #fff;
+  border:none;
+  border-radius: 0;
+
+  background: #333;
+}
+
+.add-address .save{
+  width: 50%;
+  height: 100rpx;
+  text-align: center;
+  line-height: 100rpx;
+  font-size: 28rpx;
+  color: #fff;
+  border:none;
+  border-radius: 0;
+
+  background: #6dbb6d;
+}
+

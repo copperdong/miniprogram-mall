@@ -1,0 +1,69 @@
+<view class="container">
+  <view class="swiper-tab">
+    <view class="swiper-tab-list " data-current="0" bindtap="swichNav">
+      <text class="{{currentTab==0 ? 'on' : ''}}">全部</text>
+    </view>
+    <view class="swiper-tab-list" data-current="1" bindtap="swichNav">
+      <text class="{{currentTab==1 ? 'on' : ''}}">待付款</text>
+    </view>
+    <view class="swiper-tab-list" data-current="3" bindtap="swichNav">
+      <text class="{{currentTab==3 ? 'on' : ''}}">待收货</text>
+    </view>
+    <view class="swiper-tab-list" data-current="4" bindtap="swichNav">
+      <text class="{{currentTab==4 ? 'on' : ''}}">已完成</text>
+    </view>
+    <view class="swiper-tab-list" data-current="5" bindtap="swichNav">
+      <text class="{{currentTab==5 ? 'on' : ''}}">售后</text>
+    </view>
+    <view class="swiper-tab-list" data-current="6" bindtap="swichNav">
+      <text class="{{currentTab==6 ? 'on' : ''}}">待评价</text>
+    </view>
+  </view>
+  <block wx:if="{{currentTab==6}}">
+    <!-- 订单评价 -->
+    <view class="comments">
+      <view class="goods" wx:for="{{commentList}}" wx:key="*this" wx:for-item="item">
+        <image src="{{item.goods_url}}"></image>
+        <view class="info">
+          <text class="name">{{item.goods_name}}</text>
+          <block wx:if="{{item.status}}">
+            <view class="score">
+              <text>评分：</text>
+              <view class="a" wx:for="{{userStars}}" wx:for-item="sitem" wx:for-index="index" wx:key="index">
+                <block wx:if="{{index<item.score}}">
+                  <image src="{{sitem}}"></image>
+                </block>
+              </view>
+            </view>
+            <text class="comment">{{item.comment}}</text>
+          </block>
+          <block wx:else>
+            <navigator url="../comment/comment?id={{item.id}}">
+              <view class="btn">去评价</view>
+            </navigator>
+          </block>
+        </view>
+      </view>
+    </view>
+  </block>
+  <block wx:else>
+    <!-- 订单列表 -->
+    <view class="orders">
+      <navigator url="../orderDetail/orderDetail?id={{item.id}}" class="order" wx:for="{{orderList}}" wx:key="{{item.id}}">
+        <view class="head">
+          <view class="num">订单编号：{{item.order_sn}}</view>
+          <view class="txt">{{item.orderStatusText}}</view>
+        </view>
+        <view class="goods" wx:for="{{item.goods_list}}" wx:key="{{gitem.id}}" wx:for-item="gitem">
+          <image src="{{gitem.cover}}"></image>
+          <view class="info">
+            <text class="name">{{gitem.name}}</text>
+            <text class="spec">{{gitem.specifition}}</text>
+            <text class="number">共{{gitem.number}}件商品</text>
+          </view>
+        </view>
+        <view class="price">实付：￥{{item.price}}</view>
+      </navigator>
+    </view>
+  </block>
+</view>

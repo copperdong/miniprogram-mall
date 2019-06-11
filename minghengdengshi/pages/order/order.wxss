@@ -1,0 +1,259 @@
+page{
+  width: 100%;
+  background: #fff;
+}
+.container{
+  background: #f4f4f4;
+  width: 100%;
+}
+
+/*订单*/
+.swiper-tab { 
+  display:flex;
+  flex-direction: row;
+  width: 100%; 
+  height:80rpx;
+  background:#fff;
+  border-bottom:1px solid #e6e6e6; 
+  position: fixed;
+  top: 0rpx;
+}
+.swiper-tab-list{
+  flex:1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-left:1px solid #c8c8c8;
+}
+.swiper-tab-list:first-of-type{
+  border-left:0px
+}
+
+.swiper-tab-list text {
+  text-align:center;
+  font-size: 24rpx;
+  color:#333;
+}
+
+.swiper-tab-list .on{ /* 选中状态 */
+  font-size: 30rpx;
+  color:#6dbb6d;
+}
+
+/*订单相关*/
+.orders{
+  display: flex;
+  flex-direction: column;          /*垂直布局*/
+  justify-content: space-between;
+  align-items: center;
+
+  margin-top: 80rpx;
+  height: auto;
+  width: 100%;
+}
+
+.order{
+  display: flex;
+  flex-direction: column;       /* 垂直布局 */
+  justify-content: flex-start;  /* 紧靠顶部 */
+  align-items: flex-start;      /* 紧靠左边 */
+
+  width: 100%;
+
+  margin-top: 20rpx;  /* 顶部留外边距 */
+  background: #fff;
+}
+
+.order .head{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 100%;
+  height: 80rpx;
+  line-height: 80rpx;
+  border-bottom: 1px solid #f4f4f4;
+  font-size: 30rpx;
+  color: #333;
+}
+
+.order .head .num{
+  font-size: 30rpx;
+  color: #333;
+  margin-left: 20rpx;  /* 左边留外边距 */
+}
+
+.order .head .txt{
+  font-size: 24rpx;
+  color: #b4282d;
+  margin-right: 20rpx;  /* 右边留外边距 */
+}
+
+.order .goods{
+  display: flex;
+  flex-direction: row;       /* 水平布局 */
+  justify-content: flex-start;  /* 靠紧左边 */
+  align-items: center; 
+
+  height: 200rpx;
+}
+
+.order .goods  image{
+  height:140rpx;
+  width:140rpx;
+  margin-left: 20rpx;
+}
+
+.order .goods .info{
+  flex: 1;  /*拉伸填充*/
+  display: flex;
+  flex-direction: column;          /* 垂直布局 */
+  justify-content: space-between;  /* 靠紧上下两边 */
+  align-items: flex-start;         /* 靠左边 */
+
+  height: 140rpx;
+  padding-left: 20rpx;
+}
+
+.order .goods .name{
+  width: 520rpx;
+  height: 72rpx;  /* 两行显示*/
+  line-height: 36rpx;
+  color: #333;
+  font-size: 30rpx;
+  white-space:wrap;   /* 换行 */
+  overflow: hidden;
+  text-overflow: ellipsis;   
+}
+
+.order .goods .spec{
+  width: 520rpx;
+  height: 30rpx;       /* 一行显示*/
+  line-height: 30rpx;
+  color: #666;
+  font-size: 24rpx;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;   
+}
+
+.order .goods .number{
+  height: 36rpx;
+  line-height: 36rpx;
+  color: #b4282d;
+  font-size: 24rpx;
+}
+
+.order .price{
+  height: 100rpx;
+  line-height: 100rpx;
+  margin-left: 20rpx;
+  border-top: 1px solid #f4f4f4;
+  font-size: 30rpx;
+  color: #b4282d;
+  text-align: left;
+}
+/* 评价 */
+.comments {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  margin-top: 80rpx;
+}
+
+.comments .goods {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  width: 720rpx;
+  height: 200rpx;
+  background: #fff;
+  margin: 10rpx 0;
+}
+
+.comments .goods image{
+  height:140rpx;
+  width:140rpx;
+  margin-left: 20rpx;
+}
+
+.comments .goods .info{
+  display: flex;
+  flex-direction: column;          /* 垂直布局 */
+  justify-content: space-between;  /* 靠紧上下两边 */
+  align-items: flex-start;         /* 靠左边 */
+
+  width: 540rpx;
+  height: 140rpx;
+  padding-left: 20rpx;
+}
+
+.comments .goods .name{
+  width: 100%;
+  height: 44rpx;
+  line-height: 44rpx;
+  color: #333;
+  font-size: 30rpx;
+  font-weight: bold;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; /*多余的字显示省略号*/
+}
+
+.comments .goods .score{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+
+  height: 80rpx;
+}
+
+.comments .goods .score text{
+  font-size: 24rpx;
+  color: #fa4b22;
+}
+
+.comments .goods .score .a{
+  padding: 0;
+  margin: 0;
+}
+
+.comments .goods .score .a image{
+  padding: 0;
+  margin: 4rpx;
+  width: 30rpx;
+  height: 30rpx;
+}
+
+.comments .goods .comment{
+  width: 100%;
+  height: 44rpx;
+  line-height: 44rpx;
+  color: #333;
+  font-size: 30rpx;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; /*多余的字显示省略号*/
+}
+
+.comments .goods .btn{
+  width: 120rpx;
+  height: 44rpx;
+  line-height: 44rpx;
+  text-align: center;
+  color: #fff;
+  font-size: 30rpx;
+  white-space: nowrap;
+  overflow: hidden;
+  border: 1px solid #6dbb6d;
+  border-radius: 60rpx;
+  background: #6dbb6d;
+}
+

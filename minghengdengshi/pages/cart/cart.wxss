@@ -1,0 +1,234 @@
+page{
+  background: #f4f4f4;
+}
+.container{
+  width: 750rpx;
+  background: #f4f4f4;
+}
+
+.no-cart{
+    width: 100%;
+    margin: 0 auto;
+}
+
+.no-cart .empty{
+    width: 100%;
+    height: auto;
+    margin-top: 200rpx;
+}
+
+.no-cart .empty image{
+    margin: 0 auto;
+    display: block;
+    text-align: center;
+    width: 258rpx;
+    height: 258rpx;
+}
+
+.no-cart .empty text{
+    margin: 0 auto;
+    display: block;
+    width: 258rpx;
+    height: 29rpx;
+    line-height: 29rpx;
+    text-align: center;
+    font-size: 29rpx;
+    color: #999;
+}
+
+/* 商品列表 */
+.cart-list{
+  display: flex;
+  flex-direction: column; /* 垂直布局 */
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  height: auto;
+  background: #fff;
+  margin-bottom: 120rpx;  /* 确保底部距离 */
+}
+
+.cart-list .head{
+  width: 720rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+  font-size: 30rpx;
+  color: #6dbb6d;
+  text-align: left;
+  border-bottom: 2px solid #f4f4f4;
+}
+/* 商品显示 */
+.cart-list .item{
+  display: flex;
+  flex-direction: row; /* 水平布局 */
+  justify-content: flex-start;
+  align-items: center;
+
+  width: 100%;
+  height: 200rpx;
+  border-bottom: 2px solid #f4f4f4;
+}
+/* 选择 */
+.cart-list .item .checkbox{
+  height: 34rpx;
+  width: 34rpx;
+  margin: auto 26rpx; /* 左右外边距 */
+  background: url(https://cloud-minapp-24474.cloud.ifanrusercontent.com/1hWbFEwB41FVanN4.png) no-repeat;
+  background-size: 34rpx;
+}
+
+.cart-list .item .checked{
+  background: url(https://cloud-minapp-24474.cloud.ifanrusercontent.com/1hWbF3vz1MOI2LfM.png) no-repeat;
+  background-size: 34rpx;
+}
+
+.cart-list .item .img{
+  height:140rpx;
+  width: 140rpx;
+  margin-right: 20rpx;
+}
+
+.cart-list .item .info{
+  flex : 1; /* 填充 */
+  display: flex;
+  flex-direction: column; /* 垂直布局 */
+  justify-content: space-between;
+  align-items: flex-start;
+
+  height:140rpx;
+}
+
+.cart-list .item .name{
+  max-width: 400rpx;
+  height: 32rpx;
+  font-size: 26rpx;
+  color: #333;
+  line-height: 32rpx;
+  text-align: center;
+  margin-bottom: 10rpx;
+  white-space: nowrap; /* 不换行 */
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.cart-list .item .attr{
+  text-align: center;
+  height: 32rpx;
+  line-height: 32rpx;
+  font-size: 22rpx;
+  color: #666;
+  white-space: nowrap; /* 不换行 */
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.cart-list .item .count{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 100%;
+  height: 50rpx;
+}
+
+.cart-list .item .price{
+  line-height: 40rpx;
+  font-size: 30rpx;
+  color: #b4282d;
+}
+/* 选择数量 */
+.cart-list .item .selnum{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 200rpx;
+  height: 40rpx;
+
+  font-size: 18rpx;
+  color: #333;
+  border: 1rpx solid #ccc;
+  margin-right: 20rpx;
+}
+
+.selnum .cut{
+  width: 60rpx;
+  height: 40rpx;
+  text-align: center;
+  line-height: 40rpx;
+}
+
+.selnum .number{
+  flex: 1;  /*宽度自调*/
+  height: 40rpx;
+  color: #333;
+  text-align: center;
+  line-height: 40rpx;
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+}
+
+.selnum .add{
+  width: 60rpx;
+  height: 40rpx;
+  text-align: center;
+  line-height: 40rpx;
+}
+
+/*底部导航*/
+.cart-bottom{
+  display: flex;
+  flex-direction: row;   /* 水平布局 */
+  justify-content: space-between;
+  align-items: center;
+
+  position: fixed;  /* 固定在顶部 */
+  bottom:0;
+  left:0;
+  height: 100rpx;
+  width: 100%;
+  background: #fff;
+}
+
+.cart-bottom .checkbox{
+  width: 34rpx;
+  height: 34rpx;
+  margin: auto 20rpx;
+  background: url(https://cloud-minapp-24474.cloud.ifanrusercontent.com/1hWbFEwB41FVanN4.png) no-repeat;
+  background-size: 34rpx;
+}
+
+.cart-bottom .checkbox.checked{
+  background: url(https://cloud-minapp-24474.cloud.ifanrusercontent.com/1hWbF3vz1MOI2LfM.png) no-repeat;
+  background-size: 34rpx;
+}
+
+.cart-bottom .total{
+  width: 80rpx;
+  height: 50rpx;
+  text-align: left;
+  font-size: 30rpx;
+  color: #333;
+  line-height: 50rpx;
+}
+
+.cart-bottom .price{
+  flex: 1;
+  height: 50rpx;
+  line-height: 50rpx;
+  font-size: 30rpx;
+  color: #b4282d;
+  text-align: left;
+}
+
+.cart-bottom .checkout{
+  height: 100rpx;
+  width: 220rpx;
+  text-align: center;
+  line-height: 100rpx;
+  font-size: 30rpx;
+  color: #fff;
+  background: #6dbb6d;
+}

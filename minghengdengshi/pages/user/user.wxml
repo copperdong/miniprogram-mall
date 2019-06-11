@@ -1,0 +1,39 @@
+<view class="container">
+  <view class="profile-info">
+    <image class="avatar" src="{{userInfo.avatar}}"></image>
+    <view class="info" >
+      <text class='name' bindtap="toggleLogin">{{ userInfo.nickname}}</text>
+      <view class='coupon' bindtap="toggleCoupon">优惠券</view>
+    </view>
+  </view>
+  <!-- 我的订单 -->
+  <view class="myorder">
+    <view class="head">
+      <text>我的订单</text>
+    </view>
+    <view class="body">
+      <view class="item" wx:for="{{orderItem}}" wx:for-item="oItem" wx:for-index="index" wx:key="*this" data-index="{{index}}" bindtap="toggleOrder">
+        <image src="{{oItem.icon}}"></image>
+        <text>{{oItem.name}}</text>
+      </view>
+    </view>
+  </view>
+  <!-- 联系客服 -->
+  <view class="contact-item">
+    <image src="https://cloud-minapp-24474.cloud.ifanrusercontent.com/1hWbEvChmullpJJI.png"></image>
+    <button class='cBtn' open-type="contact" session-from="weapp">联系客服</button>
+    <view class="contact-item-btn"></view>
+  </view>
+  <view class="contact-item" bindtap="toggleCall">
+    <image src="https://cloud-minapp-24474.cloud.ifanrusercontent.com/1hWbEvChmullpJJI.png"></image>
+    <button class='cBtn'>13767676797</button>
+    <view class="contact-item-btn"></view>
+  </view>
+</view>
+
+<view class='dialog-login' wx:if="{{showLoginDialog}}" bindtap='onCloseLoginDialog'>
+  <!--catchtap用于拦截事件-->
+  <view class='dialog-body' catchtap='onDialogBody'>
+    <button type="primary" open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="onWechatLogin">微信登录</button>
+  </view>
+</view>

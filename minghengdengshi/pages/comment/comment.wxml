@@ -1,0 +1,22 @@
+<!--服务评价-->
+<view class="container">
+  <!--评分-->
+  <view class='score'>
+    <view class='left'>
+      评分
+    </view>
+    <view class='right'>
+      <view class="star" bindtap="starTap" data-index="{{index}}"  wx:for="{{userStars}}" wx:key="index">
+        <image src="{{item}}"></image>
+      </view>
+      <text class='rtxt'>{{score}}.0分</text>
+    </view>
+  </view>
+  <!--textarea-->
+  <view class="conts">
+    <textarea class="areas" placeholder='更多评价请写在这里（最多150字）' minlength="{{0}}" maxlength="{{150}}" bindinput="inputs"></textarea>
+  </view>
+</view>
+
+<!--提交评价-->
+<button class='btn' bindtap="submitScore">提交评价</button>
