@@ -1,7 +1,7 @@
 # miniprogram-mall
-  微信小程序项目：铭恒灯饰电商+知晓云
-  [文档和数据库](https://www.fageka.com/store/item/s/id/urmo8pl1025.html "铭恒灯饰")  
-  [知晓云](https://cloud.minapp.com/?invitation=iosayz "知晓云")  
+- 微信小程序项目：铭恒灯饰电商+知晓云
+- [文档和数据库](https://www.fageka.com/store/item/s/id/urmo8pl1025.html "铭恒灯饰")  
+- [知晓云](https://cloud.minapp.com/?invitation=iosayz "知晓云")  
 # 指南
   本项目是来自实际项目“铭恒灯饰”<br>
   
