@@ -6,6 +6,7 @@
     多行文本和单行文本异曲同工，
     只要在每行行首加两个Tab
 <img src="https://github.com/copperdong/miniprogram-mall/blob/master/doc/gh_24da18e564c9_1280.jpg" width = "200" height = "200" div align=center /><br>
+------
     多行文本和单行文本异曲同工，
     只要在每行行首加两个Tab    
     
@@ -13,9 +14,7 @@
 <img src="https://github.com/copperdong/miniprogram-mall/blob/master/doc/catelog.jpg" width = "180" div align=left />
 <img src="https://github.com/copperdong/miniprogram-mall/blob/master/doc/cart.jpg" width = "180" div align=left />
 <img src="https://github.com/copperdong/miniprogram-mall/blob/master/doc/user.jpg" width = "180" div align=left /><br>
-<br>
-<br>
-<br>
+------
     多行文本和单行文本异曲同工，
     只要在每行行首加两个Tab   
     
