@@ -1,6 +1,5 @@
 # miniprogram-mall
 - 微信小程序项目：铭恒灯饰电商+知晓云
-- [文档和数据库](https://www.fageka.com/store/item/s/id/urmo8pl1025.html "铭恒灯饰")  
 - [知晓云](https://cloud.minapp.com/?ref=1hbbRpNfDRdr "知晓云")  
 # 指南
 `~~~`本项目是来自实际项目`铭恒灯饰商城`,`铭恒灯饰`是长三角地区一个朋友开的工厂直销店铺。主要面向本地区用户在线下经营灯具、厨具、卫浴等产品，目前在售产品有几千种，每月线下客户流量大概为几千人。<br>
